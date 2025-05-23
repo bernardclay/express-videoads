@@ -1,0 +1,55 @@
+<!-- Section 8: Footer Section -->
+<style>
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-links {
+    display: flex;
+}
+.footer-links a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.footer-links a:hover {
+    color: #ff6b00;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-links {
+        margin-top: 20px;
+        justify-content: center;
+    }
+    .footer-links a {
+        margin: 0 10px;
+    }
+}
+</style>
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2020–2025 Express Video Ads. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>

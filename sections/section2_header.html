@@ -1,0 +1,132 @@
+<!-- Section 2: Header with Navigation and Mini Timer -->
+<style>
+/* Header Styles */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+    z-index: 1000;
+}
+.sticky-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #ff6b00;
+}
+.mini-timer-container {
+    display: flex;
+    align-items: center;
+}
+.mini-timer-label {
+    font-size: 12px;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.mini-timer-units {
+    display: flex;
+}
+.mini-timer-unit {
+    text-align: center;
+    margin: 0 3px;
+}
+.mini-timer-number {
+    background-color: #ff6b00;
+    color: white;
+    font-weight: 700;
+    padding: 3px 5px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.mini-timer-label {
+    font-size: 10px;
+    color: #666;
+}
+.header-cta {
+    background-color: #ff6b00;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.header-cta:hover {
+    background-color: #e05a00;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .sticky-header .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .mini-timer-container {
+        order: 3;
+    }
+}
+</style>
+
+<header class="sticky-header">
+    <div class="container">
+        <div class="logo">Express VideoAds</div>
+        <div class="mini-timer-container" id="mini-timer-container" aria-label="Offer countdown timer">
+            <div class="mini-timer-label">OFFER EXPIRES IN:</div>
+            <div class="mini-timer-units">
+                <div class="mini-timer-unit">
+                    <div class="mini-timer-number" id="mini-days-count">07</div>
+                    <div class="mini-timer-label">D</div>
+                </div>
+                <div class="mini-timer-unit">
+                    <div class="mini-timer-number" id="mini-hours-count">00</div>
+                    <div class="mini-timer-label">H</div>
+                </div>
+                <div class="mini-timer-unit">
+                    <div class="mini-timer-number" id="mini-minutes-count">00</div>
+                    <div class="mini-timer-label">M</div>
+                </div>
+                <div class="mini-timer-unit">
+                    <div class="mini-timer-number" id="mini-seconds-count">00</div>
+                    <div class="mini-timer-label">S</div>
+                </div>
+            </div>
+        </div>
+        <a href="https://howtomakemoneyonline.mysamcart.com/checkout/express-videoads#samcart-slide-open-right" class="header-cta" aria-label="Get your professional TV commercial for $99">GET YOUR $99 VIDEO</a>
+    </div>
+</header>
+
+<!-- Simple countdown script for Google Sites -->
+<script>
+// Simple countdown timer for Google Sites
+function updateCountdown() {
+    // Set end date to 7 days from now for demo purposes
+    const endDate = new Date();
+    endDate.setDate(endDate.getDate() + 7);
+    
+    const now = new Date();
+    const diff = endDate - now;
+    
+    // Calculate days, hours, minutes, seconds
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    
+    // Update the countdown display
+    document.getElementById('mini-days-count').textContent = days.toString().padStart(2, '0');
+    document.getElementById('mini-hours-count').textContent = hours.toString().padStart(2, '0');
+    document.getElementById('mini-minutes-count').textContent = minutes.toString().padStart(2, '0');
+    document.getElementById('mini-seconds-count').textContent = seconds.toString().padStart(2, '0');
+}
+
+// Update countdown every second
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Initial update
+</script>
